@@ -7,15 +7,12 @@ The objective of this assignment was to modify starter code to create a website 
 
 Live URL:
 
-
+https://trevorwiegand92.github.io/Automated-Password-Generator/
 
 
 Github Repository URL:
 
-
-
-
-
+https://github.com/trevorwiegand92/Automated-Password-Generator
 
 
 
