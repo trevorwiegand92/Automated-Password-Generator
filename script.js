@@ -25,7 +25,7 @@ if (passwordLength > 128) {
     let numeric = window.confirm('Include numeric characters?');
     let special = window.confirm('Include special characters?');
 
-//statement to confirm proper password length.//
+//This statement is confirming that the proper amount of characters for the password has been given by the user.//
 if (lowerCase != true && upperCase != true && numeric != true && special != true) {
     alert("Must choose at least one parameter.");
     return;
@@ -49,7 +49,7 @@ function randomizer(array) {
     return indexEl;
 }
 
-
+//This function is taking the user choices and providing a unique password based on the user input.//
 function generatePassword() {
     let params = passwordParams();
     console.log(params);
@@ -81,12 +81,12 @@ function generatePassword() {
 
     return password.join('');
 }
-
+//This function takes the values provided by the user and converts the password into text.//
 function writePassword(){
     let password = generatePassword();
     let passwordText = document.querySelector('#password');
     passwordText.value = password;
 }
 
-// Add event listener to generate button
+// this is the generate button waiting for the user to click//
 generateBtn.addEventListener("click", writePassword);
