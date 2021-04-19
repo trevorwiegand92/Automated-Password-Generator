@@ -8,7 +8,7 @@ let numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let specialCharacters = ["!", "@", "#", "$", "%", "&", "+", "(", ")", "/", "*", "_", "-", " \ ", "<", ">", "[", "]", '{', "}", ];
 
 
-function passwordParams() {
+function passwordParameters() {
 // Variables to store password parameters.//
 let passwordLength = parseInt(window.prompt('How long would you like your password to be? (Min 8 - Max 128'));
 if (passwordLength < 8) {
@@ -31,14 +31,14 @@ if (lowerCase != true && upperCase != true && numeric != true && special != true
     return;
 }
 
-let pwParams = {
+let passwordParams = {
     length: passwordLength,
-    lowerChar: lowerCase,
-    upperChar: upperCase,
+    lowerCharacters: lowerCase,
+    upperCharacters: upperCase,
     number: numeric,
-    specialChar: special,
+    specialCharacters: special,
 };
-return pwParams;
+return passwordParams;
     
 }
 
@@ -51,17 +51,17 @@ function randomizer(array) {
 
 //This function is taking the user choices and providing a unique password based on the user input.//
 function generatePassword() {
-    let params = passwordParams();
+    let params = passwordParameters();
     console.log(params);
     let password = [];
     let userChoice = [];
 
-    if (params.lowerChar === true){
+    if (params.lowerCharacters === true){
         console.log(lowerCaseCharacters);
         userChoice.push(...lowerCaseCharacters);
     }
 
-    if (params.upperChar === true){
+    if (params.upperCharacters === true){
         userChoice.push(...upperCaseCharacters);
     }
 
@@ -69,7 +69,7 @@ function generatePassword() {
         userChoice.push(...numericCharacters);
     }
 
-    if (params.specialChar === true){
+    if (params.specialCharacters === true){
         userChoice.push(...specialCharacters);
     }
 
